@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coleções</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html">Mangás</a>
+        <a href="collection.html">Coleções</a>
+    </nav>
+
+    <h1>Coleções cadastradas</h1>
+    <button id="addcollectionBtn">Adicionar Coleção</button>
+
+    <table id="collectionsTable">
+        <thead>
+            <tr>
+                <th>Nome da coleção</th>
+                <th>Quantidade de mangás</th>
+                <th>Editora responsável</th>
+                <th>Gênero</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <div id="collectionModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitlecollection">Adicionar Coleção</h2>
+            <form id="collectionForm">
+                <label for="namecollection">Nome:</label>
+                <input type="text" id="namecollection" required>
+
+                <label for="quantity">Quantidade de Mangás:</label>
+                <input type="number" id="quantity" required>
+
+                <label for="description">Editora responsável:</label>
+                <input type="text" id="description" required>
+
+                <label for="responsible">Gênero:</label>
+                <select id="responsible" required>
+                    <option value="Shounen">Shounen</option>
+                    <option value="Shoujo">Shoujo</option>
+                    <option value="Gekigá">Gekigá</option>
+                    <option value="Josei">Josei</option>
+                </select>
+
+                <button type="submit">Salvar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/collection.js"></script>
+</body>
+</html>

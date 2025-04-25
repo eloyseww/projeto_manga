@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Mangás</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/frontend/index.html">Mangás</a>
+        <a href="/frontend/collection.html">coleções</a>
+    </nav>
+
+    <h1>Mangás Cadastrados</h1>
+    <button id="addUserBtn">Adicionar Mangá</button>
+
+    <table id="usersTable">
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Gênero</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Os usuários serão listados aqui via JS -->
+        </tbody>
+    </table>
+
+    <!-- Modal para adicionar/editar usuário -->
+    <div id="userModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle">Adicionar Mangá</h2>
+            <form id="userForm">
+                <label for="name">Título:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="profile">Gênero:</label>
+                <select id="profile" name="profile" required>
+                    <option value="Shounen">Shounen</option>
+                    <option value="Shoujo">Shoujo</option>
+                    <option value="Gekigá">Gekigá</option>
+                    <option value="Josei">Josei</option>
+                </select>
+
+                <label for="password">Número do cadastro:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit" id="saveUserBtn">Salvar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="./js/user.js"></script>
+</body>
+</html>
